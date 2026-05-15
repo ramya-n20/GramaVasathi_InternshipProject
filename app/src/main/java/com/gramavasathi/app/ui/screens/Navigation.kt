@@ -17,6 +17,7 @@ sealed class Screen(val route: String) {
     object BookingConfirm : Screen("booking_confirm")
     object HostTraining : Screen("host_training")
     object CulturalGuide : Screen("cultural_guide")
+    object AI : Screen("ai")
 }
 
 @Composable
@@ -48,6 +49,9 @@ fun GramaVasathiApp() {
         }
         composable(Screen.CulturalGuide.route) {
             CulturalGuideScreen(navController = navController)
+        }
+        composable(Screen.AI.route) {
+            AIAssistantScreen()
         }
     }
 }

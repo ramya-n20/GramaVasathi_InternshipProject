@@ -156,6 +156,26 @@ fun HomeScreen(navController: NavController, viewModel: GramaVasathiViewModel) {
                 Spacer(modifier = Modifier.height(8.dp))
             }
 
+            Spacer(modifier = Modifier.height(12.dp))
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                NavCard(
+                    icon = Icons.Default.SmartToy,
+                    label = "AI Assistant",
+                    color = Color(0xFF6A5ACD),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    navController.navigate(Screen.AI.route)
+                }
+
+                Spacer(modifier = Modifier.weight(1f))
+            }
+
             Spacer(modifier = Modifier.height(24.dp))
 
             // ── Impact Stats ──
